@@ -30,7 +30,7 @@ class App {
 
   private initializeRoutes(): void {
     // Health check
-    this.app.get('/health', (res: Response) => {
+    this.app.get('/health', (_req, res: Response) => {
       res.status(200).json({
         status: 'OK',
         message: 'Event Manager API is running',
